@@ -132,13 +132,13 @@ backend apis_back
 #RU-WEB 1/2
 frontend web_front
    mode tcp
-   bind 10.7.11.136:80
+   bind 10.7.11.36:80
 #   stats uri /haproxy?stats
    default_backend web_back
 
 frontend webs_front
    mode tcp
-   bind 10.7.11.136:443
+   bind 10.7.11.36:443
 #   stats uri /haproxy?stats
    default_backend webs_back
 
@@ -147,16 +147,16 @@ backend web_back
    fullconn 200000
    option tcp-check
    balance source
-   server web1 10.7.11.134:80 check
-   server web2 10.7.11.135:80 check
+   server web1 10.7.11.34:80 check
+   server web2 10.7.11.35:80 check
 
 backend webs_back
    mode tcp
    fullconn 200000
    option tcp-check
    balance source
-   server web1 10.7.11.134:443 check
-   server web2 10.7.11.135:443 check
+   server web1 10.7.11.34:443 check
+   server web2 10.7.11.35:443 check
 
 ### KEEPALIVED ###
 global_defs {
@@ -197,7 +197,7 @@ vrrp_instance VI_2 {
         auth_pass KPSjXfRG
     }
     virtual_ipaddress {
-        10.7.11.136
+        10.7.11.36
     }
     track_script {
         chk_haproxy
