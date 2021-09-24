@@ -235,13 +235,6 @@ net.ipv4.tcp_tw_reuse = 1
 
 # Adjust TCP orphan limit
 net.ipv4.tcp_max_orphans = 262144
-
+#
 net.ipv4.ip_nonlocal_bind = 1
-
-
-
-
-sudo vi /etc/sysctl.d/99-custom.conf
-net.ipv4.ip_nonlocal_bind=1
-sudo sysctl -f /etc/sysctl.d/99-custom.conf
 
