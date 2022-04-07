@@ -1,4 +1,6 @@
-### HAPROXY  ####
+!!### HAPROXY  ####
+!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!
 #---------------------------------------------------------------------
 # Example configuration for a possible web application.  See the
 # full configuration options online.
@@ -159,6 +161,9 @@ backend webs_back
    server web2 10.7.11.35:443 check
 
 ### KEEPALIVED ###
+!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!
+
 global_defs {
     router_id centos_1
 }
@@ -205,6 +210,9 @@ vrrp_instance VI_2 {
 }
 
 ### SYSCTL.CONF  ###
+!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!
+
 net.core.rmem_max = 16777216
 net.core.wmem_max = 16777216
 
